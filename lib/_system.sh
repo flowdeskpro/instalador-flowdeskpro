@@ -108,7 +108,7 @@ EOF
 #######################################
 system_unzip_izing() {
   print_banner
-  printf "${WHITE} 💻 Baixando izing...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Baixando FlowDeskPro...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
