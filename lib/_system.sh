@@ -102,13 +102,13 @@ EOF
 }
 
 #######################################
-# unzip flowdeskpro
+# unzip izing
 # Arguments:
 #   None
 #######################################
 system_unzip_izing() {
   print_banner
-  printf "${WHITE} 💻 Baixando flowdeskpro...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Baixando izing...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
@@ -170,7 +170,7 @@ criar_banco_dados() {
   sleep 2
 
   sudo su - root <<EOF
-docker run --name postgresql-${nome_instancia} -e POSTGRES_USER=flow -e POSTGRES_PASSWORD=${pg_pass} -e TZ="America/Sao_Paulo" -p ${porta_postgre_intancia}:5432 --restart=always -v /data:/var/lib/postgresql/data -d postgres
+docker run --name postgresql-${nome_instancia} -e POSTGRES_USER=izing -e POSTGRES_PASSWORD=${pg_pass} -e TZ="America/Sao_Paulo" -p ${porta_postgre_intancia}:5432 --restart=always -v /data:/var/lib/postgresql/data -d postgres
 
 EOF
 
@@ -364,7 +364,7 @@ system_nginx_conf() {
 
 sudo su - root << EOF
 
-cat > /etc/nginx/conf.d/flowdeskpro.conf << 'END'
+cat > /etc/nginx/conf.d/izingio.conf << 'END'
 client_max_body_size 100M;
 large_client_header_buffers 16 5120k;
 END
@@ -435,7 +435,7 @@ system_docker_start() {
   sudo su - root <<EOF
   docker stop $(docker ps -q)
   docker container start postgresql
-  docker container start redis-flowdeskpro
+  docker container start redis-izing
   docker container start rabbitmq
 EOF
 
@@ -475,11 +475,11 @@ system_success() {
   printf "${GREEN} 💻 Instalação concluída com Sucesso...${NC}"
   printf "${CYAN_LIGHT}";
   printf "\n\n"
-  printf "Usuário painel SaaS: super@flowdeskpro.io"
+  printf "Usuário painel SaaS: super@izing.io"
   printf "\n"
   printf "Senha: 123456"
   printf "\n"
-  printf "Usuário: admin@flowdeskpro.io"
+  printf "Usuário: admin@izing.io"
   printf "\n"
   printf "Senha: 123456"
   printf "\n"
@@ -491,7 +491,7 @@ system_success() {
   printf "\n"
   printf "Senha Usuario Deploy: $deploy_password"
   printf "\n"
-  printf "Usuario do Banco de Dados: flow"
+  printf "Usuario do Banco de Dados: izing"
   printf "\n"
   printf "Nome do Banco de Dados: postgres"
   printf "\n"
