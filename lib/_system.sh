@@ -170,7 +170,7 @@ criar_banco_dados() {
   sleep 2
 
   sudo su - root <<EOF
-docker run --name postgresql-${nome_instancia} -e POSTGRES_USER=izing -e POSTGRES_PASSWORD=${pg_pass} -e TZ="America/Sao_Paulo" -p ${porta_postgre_intancia}:5432 --restart=always -v /data:/var/lib/postgresql/data -d postgres
+docker run --name postgresql-${nome_instancia} -e POSTGRES_USER=flow -e POSTGRES_PASSWORD=${pg_pass} -e TZ="America/Sao_Paulo" -p ${porta_postgre_intancia}:5432 --restart=always -v /data:/var/lib/postgresql/data -d postgres
 
 EOF
 
@@ -475,11 +475,11 @@ system_success() {
   printf "${GREEN} 💻 Instalação concluída com Sucesso...${NC}"
   printf "${CYAN_LIGHT}";
   printf "\n\n"
-  printf "Usuário painel SaaS: super@izing.io"
+  printf "Usuário painel SaaS: super@flowdeskpro.io"
   printf "\n"
   printf "Senha: 123456"
   printf "\n"
-  printf "Usuário: admin@izing.io"
+  printf "Usuário: admin@flowdeskpro.io"
   printf "\n"
   printf "Senha: 123456"
   printf "\n"
@@ -491,7 +491,7 @@ system_success() {
   printf "\n"
   printf "Senha Usuario Deploy: $deploy_password"
   printf "\n"
-  printf "Usuario do Banco de Dados: izing"
+  printf "Usuario do Banco de Dados: flow"
   printf "\n"
   printf "Nome do Banco de Dados: postgres"
   printf "\n"
