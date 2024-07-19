@@ -52,8 +52,6 @@ inquiry_options() {
   printf "\n\n"
   printf "   [1] Instalar\n"
   printf "   [2] Atualizar Conector WWebJS whatsapp.js\n"
-  printf "   [3] Instalar 2 instancia\n"
-  printf "   [4] Atualizar Izing\n"
   printf "   [5] Ativar Firewall\n"
   printf "   [6] Desativar Firewall\n"
   printf "\n"
