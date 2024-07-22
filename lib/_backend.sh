@@ -144,7 +144,7 @@ RABBITMQ_DEFAULT_PASS=123456
 API_URL_360=https://waba-sandbox.360dialog.io
 
 # usado para mosrar opções não disponíveis normalmente.
-ADMIN_DOMAIN=izing.io
+ADMIN_DOMAIN=flowdeskpro.io
 
 # Dados para utilização do canal do facebook
 FACEBOOK_APP_ID=3237415623048660
@@ -255,7 +255,7 @@ EOF
 #######################################
 git_update() {
   print_banner
-  printf "${WHITE} 💻 Atualizando o izing do git...${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Atualizando o flowdeskpro do git...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
